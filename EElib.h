@@ -20,6 +20,21 @@ typedef struct waveform
     double theta;
 } waveform;
 
+typedef struct element
+{
+    double value;
+    char* units;
+} element;
+
+typedef struct circuit
+{
+    int num_nodes;
+    char** branches;
+    element* elements;
+    char* element_locations;
+
+} circuit;
+
 
 //initializes a complex number with a value of 0 + j0
 complex* c_base_init();
